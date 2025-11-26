@@ -1,16 +1,17 @@
 {
   "name": "code-detox",
   "version": "1.0.0",
-  "description": "Clean your messy repo with one command - detect unused code, dead files, stale components, import rot",
-  "main": "dist/index.js",
+  "description": "CLI tool to detect unused code, dead files, stale components and import rot in JavaScript/TypeScript projects",
+  "main": "dist/cli/index.js",
   "type": "module",
   "bin": {
-    "code-detox": "./dist/cli/index.js"
+    "code-detox": "dist/cli/index.js"
   },
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
     "start": "node dist/cli/index.js",
+    "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -20,10 +21,24 @@
     "code-analysis",
     "ast",
     "refactor",
-    "cli"
+    "cli",
+    "static-analysis",
+    "linter",
+    "code-quality",
+    "javascript",
+    "typescript",
+    "babel"
   ],
-  "author": "",
+  "author": "Cintu07",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cintu07/code-detox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cintu07/code-detox/issues"
+  },
+  "homepage": "https://github.com/Cintu07/code-detox#readme",
   "dependencies": {
     "@babel/parser": "^7.23.0",
     "@babel/traverse": "^7.23.0",
